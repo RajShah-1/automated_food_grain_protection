@@ -1,5 +1,5 @@
 #define TEMPERATURE_PIN A1
-
+#define RAIN_PIN A0
 String OnOff;   
 
 void setup(){
@@ -9,7 +9,9 @@ void setup(){
 /*
  * Pins occupied :
  *   Temp Sensor : A1,GND,5V;
+ *   Rain Sensor : A0,GND,5V
  *   Bluetooth Module : 0(RX),1(TX),3.3V,GND
+ *   
  *   Add Data for other sensors:
  *   
  */
@@ -49,9 +51,19 @@ int getTemperature(void){
 int getHumidity(void){
   return 1;
 }
-//Returns YES or NO
-String isRaining(void){
-  return "NO";
+//Returns current status of rain
+String isRaining(void)
+{
+  int x = analogRead(RAIN_PIN);
+  
+  if(x<=1023 && x>=800)
+    return "No rain";
+  else if(x<=800 && x>=500)
+    return "Light rain";
+  else if(x<=500 && x>=300)
+    return "Heavy rain";
+  else
+    return "Very heavy rain";
 }
 //Returns soil moisture in %
 int getMoisture(void){
