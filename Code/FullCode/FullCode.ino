@@ -1,5 +1,7 @@
 #define TEMPERATURE_PIN A1
 #define RAIN_PIN A0
+#define MOISTURE_PIN A2
+
 String OnOff;   
 
 void setup(){
@@ -11,7 +13,7 @@ void setup(){
  *   Temp Sensor : A1,GND,5V;
  *   Rain Sensor : A0,GND,5V
  *   Bluetooth Module : 0(RX),1(TX),3.3V,GND
- *   
+ *   Moisture Sensor : A2,GND,5V;
  *   Add Data for other sensors:
  *   
  */
@@ -41,7 +43,6 @@ void printData(void){
   // "|" is used as a delimeter
   Serial.println(String(getTemperature())+"|"+String(getHumidity())+"|"+String(isRaining())+"|"+String(getMoisture()));
 }
-
 //Returns temperature in C
 int getTemperature(void){
   int temp = analogRead(TEMPERATURE_PIN);
@@ -67,5 +68,7 @@ String isRaining(void)
 }
 //Returns soil moisture in %
 int getMoisture(void){
-  return 2;
+  int tmpMoisture = analogRead(MOISTURE_PIN);
+  int moisture = map(tmpMoisture,550,0,0,100);
+  return moisture;
 }
