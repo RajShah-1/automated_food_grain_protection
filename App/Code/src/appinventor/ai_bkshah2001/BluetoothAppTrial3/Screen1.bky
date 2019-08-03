@@ -210,91 +210,126 @@
                         </value>
                         <value name="AT">
                           <block type="text" id="paI#,nahf$46O%J(.W-K">
-                            <field name="TEXT">|</field>
+                            <field name="TEXT">_</field>
                           </block>
                         </value>
                       </block>
                     </value>
                     <next>
-                      <block type="component_set_get" id="$tzn2KZ|}KrJZ-!M/?j3">
-                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="TempData"></mutation>
-                        <field name="COMPONENT_SELECTOR">TempData</field>
+                      <block type="component_set_get" id="dgAMZU~M*@;d5]mTjNGW">
+                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="tmpText"></mutation>
+                        <field name="COMPONENT_SELECTOR">tmpText</field>
                         <field name="PROP">Text</field>
                         <value name="VALUE">
-                          <block type="lists_select_item" id="0nCL32x-zn9*sFk[3TDx">
-                            <value name="LIST">
-                              <block type="lexical_variable_get" id="sOh0ruyw/kH.tMuGJEs1">
-                                <field name="VAR">global List</field>
-                              </block>
-                            </value>
-                            <value name="NUM">
-                              <block type="math_number" id="zHTV)Gj7H/T^)e5W3B@A">
-                                <field name="NUM">1</field>
-                              </block>
-                            </value>
+                          <block type="lexical_variable_get" id="-5XEl=/Zo8NJjm.?~TO~">
+                            <field name="VAR">global Input</field>
                           </block>
                         </value>
                         <next>
-                          <block type="component_set_get" id="NmQvrqvVe|Ns,IXDiC~A">
-                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="HumidityData"></mutation>
-                            <field name="COMPONENT_SELECTOR">HumidityData</field>
-                            <field name="PROP">Text</field>
-                            <value name="VALUE">
-                              <block type="lists_select_item" id="dXK;;6Rtn}RpXc+rf.0O">
-                                <value name="LIST">
-                                  <block type="lexical_variable_get" id="X93{Y$rjx.mhh@kc0;DN">
-                                    <field name="VAR">global List</field>
+                          <block type="controls_if" id="Z@sN.IlRY@Ut(GMfWn@P">
+                            <value name="IF0">
+                              <block type="logic_compare" id="pc:e]zU3l$!*}}*|HluR">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="lists_length" id="GgQQOC4e=7phlpDbwjLE">
+                                    <value name="LIST">
+                                      <block type="lexical_variable_get" id="IHzB+)q%N=/V8fjTj;:3">
+                                        <field name="VAR">global List</field>
+                                      </block>
+                                    </value>
                                   </block>
                                 </value>
-                                <value name="NUM">
-                                  <block type="math_number" id="!?2WC~^bf6(7!IU465mj">
-                                    <field name="NUM">2</field>
+                                <value name="B">
+                                  <block type="math_number" id="7eLGI5!IMlc[p6V%(tF#">
+                                    <field name="NUM">4</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
-                            <next>
-                              <block type="component_set_get" id="p!F]x@YxX[_A,F^8[?hb">
-                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="RainData"></mutation>
-                                <field name="COMPONENT_SELECTOR">RainData</field>
+                            <statement name="DO0">
+                              <block type="component_set_get" id="$tzn2KZ|}KrJZ-!M/?j3">
+                                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="TempData"></mutation>
+                                <field name="COMPONENT_SELECTOR">TempData</field>
                                 <field name="PROP">Text</field>
                                 <value name="VALUE">
-                                  <block type="lists_select_item" id="tJY9G;6ZcVc)4i_1;tjY">
+                                  <block type="lists_select_item" id="0nCL32x-zn9*sFk[3TDx">
                                     <value name="LIST">
-                                      <block type="lexical_variable_get" id="iyR,BKIjI=A8D=diaHa[">
+                                      <block type="lexical_variable_get" id="sOh0ruyw/kH.tMuGJEs1">
                                         <field name="VAR">global List</field>
                                       </block>
                                     </value>
                                     <value name="NUM">
-                                      <block type="math_number" id="%g2X~LCcU=47%FeNp4~]">
-                                        <field name="NUM">3</field>
+                                      <block type="math_number" id="zHTV)Gj7H/T^)e5W3B@A">
+                                        <field name="NUM">1</field>
                                       </block>
                                     </value>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="component_set_get" id="pWi}t9A.SKBfr?~2/S:t">
-                                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="MoistureData"></mutation>
-                                    <field name="COMPONENT_SELECTOR">MoistureData</field>
+                                  <block type="component_set_get" id="NmQvrqvVe|Ns,IXDiC~A">
+                                    <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="HumidityData"></mutation>
+                                    <field name="COMPONENT_SELECTOR">HumidityData</field>
                                     <field name="PROP">Text</field>
                                     <value name="VALUE">
-                                      <block type="lists_select_item" id="OP[6wO|p?Q|k`[u.#6bx">
+                                      <block type="lists_select_item" id="dXK;;6Rtn}RpXc+rf.0O">
                                         <value name="LIST">
-                                          <block type="lexical_variable_get" id="+HfEMh+aq]*;voZ~hfSL">
+                                          <block type="lexical_variable_get" id="X93{Y$rjx.mhh@kc0;DN">
                                             <field name="VAR">global List</field>
                                           </block>
                                         </value>
                                         <value name="NUM">
-                                          <block type="math_number" id="_nP;aDZ$0/JQ/DwD5GUg">
-                                            <field name="NUM">4</field>
+                                          <block type="math_number" id="!?2WC~^bf6(7!IU465mj">
+                                            <field name="NUM">2</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
+                                    <next>
+                                      <block type="component_set_get" id="p!F]x@YxX[_A,F^8[?hb">
+                                        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="RainData"></mutation>
+                                        <field name="COMPONENT_SELECTOR">RainData</field>
+                                        <field name="PROP">Text</field>
+                                        <value name="VALUE">
+                                          <block type="lists_select_item" id="tJY9G;6ZcVc)4i_1;tjY">
+                                            <value name="LIST">
+                                              <block type="lexical_variable_get" id="iyR,BKIjI=A8D=diaHa[">
+                                                <field name="VAR">global List</field>
+                                              </block>
+                                            </value>
+                                            <value name="NUM">
+                                              <block type="math_number" id="%g2X~LCcU=47%FeNp4~]">
+                                                <field name="NUM">3</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="component_set_get" id="pWi}t9A.SKBfr?~2/S:t">
+                                            <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="MoistureData"></mutation>
+                                            <field name="COMPONENT_SELECTOR">MoistureData</field>
+                                            <field name="PROP">Text</field>
+                                            <value name="VALUE">
+                                              <block type="lists_select_item" id="OP[6wO|p?Q|k`[u.#6bx">
+                                                <value name="LIST">
+                                                  <block type="lexical_variable_get" id="+HfEMh+aq]*;voZ~hfSL">
+                                                    <field name="VAR">global List</field>
+                                                  </block>
+                                                </value>
+                                                <value name="NUM">
+                                                  <block type="math_number" id="_nP;aDZ$0/JQ/DwD5GUg">
+                                                    <field name="NUM">4</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
-                            </next>
+                            </statement>
                           </block>
                         </next>
                       </block>
